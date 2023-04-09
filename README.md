@@ -61,12 +61,13 @@ Some of the main challenges may include:
 
 > What would you do to collect new and good-quality data from the web? Assume you want to use them to train a neural model for Machine Translation.
 
-The problem of collecting new data from the web boils down to the identification of potential sources. Apart from the well-known continuously updated collections such as [OPUS](https://opus.nlpl.eu) or [WMT](http://www.statmt.org/wmt20/translation-task.html), we need to identify websites with multilingual content, such as institutional websites, books translated in multiple languages, Wikipedia, etc. We can also consider using monolingual datasets using techniques such as back-translation. In this phase, we need special attention to the terms of service of each source. 
+The problem of collecting new data from the web boils down to the identification of potential sources. Apart from the well-known continuously updated collections such as [OPUS](https://opus.nlpl.eu) or [WMT](http://www.statmt.org/wmt20/translation-task.html), we need to identify websites with multilingual content, such as institutional websites, books translated in multiple languages, Wikipedia, etc. We can also consider using monolingual datasets using techniques such as back-translation. In this phase, we need special attention to the terms of service of each source. All of this can be achieved using standard web scraping techniques.
 
 > Suppose that low-quality translations created by the system are post-edited by professional translators. How would you use this process to monitor the quality of the Machine Translation system?
 
-To monitor the quality of the Machine Translation system using post-edited translations by professional translators, we need first to establish quality metrics. We can pair the classic BLEU or METEOR scores with some human evaluation scores such as adequacy and fluency. This could allow us to see through the limitations of algorithmic evaluation methods.  
-Then, the post-edited translation could be included in the dataset in a data-augmentation fashion for the following retraining of the model. 
+To monitor the quality of the Machine Translation system using post-edited translations by professional translators, we need first to establish quality metrics. We can pair the classic BLEU or METEOR scores with some human evaluation scores such as adequacy and fluency. This could allow us to see through the limitations of algorithmic evaluation methods. Then, the post-edited translation could be included in the dataset in a data-augmentation fashion for the following retraining of the model. 
+
 The information gathered from this process should be used to provide feedback to the MT development team: this feedback will be useful to identify areas for improvement and weaknesses of the model.
+
 As a final thought, the availability of human translators could be exploited by introducing Reinforcement Learning from Human Feedback (RLHF), since it has been shown to be effective in training LLMs. 
 
