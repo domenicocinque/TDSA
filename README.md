@@ -3,9 +3,12 @@ The first exercise is in the file `notebook.ipynb`.
 
 # Exercise 2
 > Can you explain the purpose of the orders_items table? 
-The order_items table is a _junction table_. It contains the primary keys of other tables as foreign keys. In our case it allows to connect the orders and products tables. 
+The order_items table is a _junction table_. It contains the primary keys of other tables as foreign keys. In our case it allows to connect the orders and products tables.
+
+The order_items table is a _junction table_. It contains the primary keys of other tables as foreign keys. In our case it allows to connect the orders and products tables.
 
 > Can you write a SQL query to find the average order cost per country?
+
 ```mysql
 SELECT customers.country, AVG(orders.order_cost) AS avg_order_cost
 FROM customers
@@ -13,6 +16,7 @@ LEFT JOIN orders ON customers.id = orders.id_customer;
 ```
 
 > Can you write a SQL query to find the name of the highest price product sold to an Italian customer?
+
 ```mysql 
 SELECT TOP 1 products.name 
 FROM (
