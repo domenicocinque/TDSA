@@ -3,7 +3,6 @@ The first exercise is in the file `notebook.ipynb`.
 
 # Exercise 2
 > Can you explain the purpose of the orders_items table? 
-The order_items table is a _junction table_. It contains the primary keys of other tables as foreign keys. In our case it allows to connect the orders and products tables.
 
 The order_items table is a _junction table_. It contains the primary keys of other tables as foreign keys. In our case it allows to connect the orders and products tables.
 
